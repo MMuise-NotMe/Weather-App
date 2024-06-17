@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap')
+
+:root
+  --var-white: #fff
+  --var-black: #000
+  --var-grey-1: #555555
+  --var-grey-2: #b3b3b3
+  --var-grey-3: #e0e0e0
+  --var-grey-4: #ececec
+  --var-grey-5: #dddbdb
+  --var-grey-6: #666666
+  --var-light-blue: #add8e6
+  --var-dark-blue: #1a2761
+  --padding-bot-area: 1.5rem
+  --var-red: #b92220
+  --var-red-2: #d15e5c
+  --var-green: #1c801d
+  --var-green-2: #6ec46e
+  --var-max: #b65251
+  --var-min: #6195a7
+
+body
+  font-family: "Inter", "Roboto", "Arial", sans-serif
+  margin: 0
+  padding: 0
+  background-color: var(--var-dark-blue)
+  background-image: none
+  min-height: 100vh
+
+p, h3, span, input
+  color: var(--var-black)
+
+.app-name, .invalid-city-text, .loading-text
+  color: var(--var-white)
+
+.App
+  padding: 0
+  margin: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+
+  .app-name
+    text-align: center
+    width: 100%
+    margin: 0
+    padding: 0.8rem 0rem
+
+.app-container
+  width: 80%
+  height: auto
+
+@keyframes slideDown
+  0%
+    max-height: 0
+
+  100%
+    max-height: 1000px
+
+.information
+  width: 80%
+  background-color: var(--var-grey-4)
+  border-radius: 5px
+  overflow: hidden
+  max-height: 0
+  animation: slideDown 1s ease-in-out forwards
+  .top-area
+    display: flex
+    justify-content: right
+    padding: 0.5rem
+  .bot-area
+    display: grid
+    grid-template-columns: repeat(3,1fr)
+    .bot-left-area
+      padding-left: var(--padding-bot-area)
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .bot-center-area
+      display: flex
+      justify-content: center
+      align-items: center
+
+    .bot-right-area
+      padding-right: var(--padding-bot-area)
+      display: flex
+      justify-content: center
+      align-items: center
+
+// main weather icon section
+.icon-desc-area
+  .img-con
+    background-color: var(--var-grey-5)
+    border-radius: 50%
+    width: 200px
+    height: 200px
+  .sky-desc
+    text-align: center
+    text-transform: capitalize
+    font-weight: 300
+    font-size: 1.3rem
+    margin: 1.5rem 0 1.5rem 0
+
+// main weather name and time section
+.name-time-area
+  display: flex
+  align-items: center
+  flex-direction: column
+  .city-country-name
+    display: flex
+    align-items: center
+    flex-direction: column
+    .city-name
+      font-weight: 500
+      font-size: 2rem
+    .country-name
+      font-weight: 300
+      font-size: 1.5rem
+  .current-date
+    text-align: center
+    font-weight: 300
+    font-size: 1rem
+
+// main weather temperature section
+.temp-wind-area
+  display: flex
+  align-items: center
+  flex-direction: column
+
+.curr-temp-data
+  margin-bottom: 0.5rem
+  .current-temp
+    margin: 0
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    .current-temp-num
+      font-size: 4rem
+      font-weight: 400
+    .current-temp-unit
+      position: absolute
+      font-size: 1.4rem
+      font-weight: 300
+      left: 75%
+      botton: 100%
+  .temp-area
+    display: flex
+    align-items: center
+    flex-direction: row
+    margin: 1rem 0rem 0rem 0rem
+    position: relative
+    .max-temp, .min-temp
+      font-weight: 400
+      width: 35px
+    .max-temp
+      color: var(--var-max)
+      margin: 0rem
+    .min-temp
+      color: var(--var-min)
+      margin: 0rem
+    .temp-divider
+      width: 100%
+      height: 1px
+      background-image: linear-gradient(to left, var(--var-max) , var(--var-min))
+      margin: 0.5rem
+      padding: 0.1rem 2rem
+      position: relative
+      .divider-circle
+        width: 10px
+        height: 10px
+        background-color: white
+        border: .1px solid var(--var-grey-1)
+        border-radius: 50%
+        position: absolute
+        transform: translateY(-50%)
+        transition: all 0.3s ease-in-out
+
+.wind-humid-data
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  margin-bottom: 1.5rem
+  .wind-speed-con, .wind-direc-con, .humid-level-con
+    display: flex
+    align-content: center
+    justify-content: center
+    align-items: center
+    flex-direction: column
+    padding: 0rem 1rem 0rem
+  span
+    font-size: 1.1rem
+    font-weight: 300
+  svg
+    font-size: 1.3rem
+    margin: 1rem 0rem
+
+// temperature unit change button
+.unit-change-area
+  .btn-con
+    .unit-change-btn
+      transition: box-shadow 1s
+      cursor: pointer
+      border: 0
+      border-radius: 25px
+      position: relative
+      background-color: var(--var-green-2)
+      padding: 0
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      overflow: hidden
+      .celsius-btn, .fahrenheit-btn
+        font-size: 0.8rem
+        font-weight: 100
+        padding: 0.4rem 0.6rem
+        margin: 0
+        min-width: 50%
+        display: flex
+        align-items: center
+        justify-content: center
+        transition: all .3s
+      .celsius-btn
+        background-color: var(--var-green-2)
+      .fahrenheit-btn
+        background-color: var(--var-grey-6)
+      &.celsius-toggle
+        .celsius-btn
+          background-color: var(--var-green-2)
+        .fahrenheit-btn
+          background-color: var(--var-grey-6)
+      &.fahrenheit-toggle
+        .celsius-btn
+          background-color: var(--var-grey-6)
+        .fahrenheit-btn
+          background-color: var(--var-green-2)
+
+.temp-change
+  transition: opacity 0.5s
+
+  &.fade
+    opacity: 0
+
+// information container
+.informations-container
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 10rem 0rem
+
+.search-engine
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  margin-bottom: 10px
+  margin-top: 15px
+  .search-area
+    width: 60%
+    display: flex
+    justify-content: center
+    align-items: center
+    .city-search
+      width: 100%
+      height: 45px
+      border: none
+      border-radius: 25px
+      padding: 2px 15px
+      font-size: 16px
+      outline: none
+      border: 0px
+      box-shadow: inset 0px 0px 0px 0px var(--var-black)
+      &:focus
+        box-shadow: inset 1px 1px 3px 0px var(--var-black)
+
+// loading circle
+.loading-circle
+  display: flex
+  justify-content: center
+  align-content: center
+  justify-items: center
+  align-items: center
+  border: 16px solid #f3f3f3
+  border-radius: 50%
+  border-top: 16px solid #3498db
+  width: 120px
+  height: 120px
+  animation: spin 2s linear infinite
+
+@keyframes spin
+  0%
+    transform: rotate(0deg)
+
+  100%
+    transform: rotate(360deg)
+
+@import "_media"

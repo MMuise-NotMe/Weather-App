@@ -1,38 +1,64 @@
+:root {
+  --var-white: #fff;
+  --var-black: #000;
+  --var-grey-1: #555555;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  padding: 0;
+  margin: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-content: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.app-container {
+  width: 80%;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.information-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
 }
+.information-container .left-con {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.information-container .left-con .weather-image-con {
+  display: block;
+}
+
+.search-engine {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.search-engine .search-area {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-engine .search-area .city-search {
+  width: 100%;
+  height: 45px;
+  border: 1px solid var(--var-black);
+  border-radius: 8px;
+  padding: 2px 15px;
+  font-size: 16px;
+  outline: none;
+  background-color: #ffffff;
+  color: #555555;
+}/*# sourceMappingURL=App.css.map */
