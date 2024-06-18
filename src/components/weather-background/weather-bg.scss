@@ -8,43 +8,41 @@ $transparent-image: url("../../images/solid-bg.PNG");
 $background-color: transparent;
 $main-color: #1a2761;
 
-.full-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: $main-color;
-    background-image: $transparent-image;
-    z-index: -1;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-color 0.8s ease-in-out,
-        background-image 0.8s ease-in-out;
-}
+// .full-background {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     width: 100%;
+//     height: 100%;
+//     z-index: -1;
+//     background-size: cover;
+//     background-position: center;
+//     background-repeat: no-repeat;
+//     transition: background-color 0.8s ease-in-out,
+//         background-image 0.8s ease-in-out;
+// }
 
-.full-background.clear {
+body.clear {
     background-image: $clear-image;
     background-color: $background-color;
 }
-.full-background.clouds {
+body.clouds {
     background-image: $clouds-image;
     background-color: $background-color;
 }
-.full-background.drizzle {
+body.drizzle {
     background-image: $drizzle-image;
     background-color: $background-color;
 }
-.full-background.rain {
+body.rain {
     background-image: $rain-image;
     background-color: $background-color;
 }
-.full-background.snow {
+body.snow {
     background-image: $snow-image;
     background-color: $background-color;
 }
-.full-background.thunderstorm {
+body.thunderstorm {
     background-image: $thunderstorm-image;
     background-color: $background-color;
 }
