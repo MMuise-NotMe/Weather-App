@@ -10,8 +10,8 @@ export default function TemperatureChangeBtn({handleToggle, tempUnit}) {
                     }`}
                     onClick={handleToggle}
                 >
-                    <p className="celsius-btn">Celsius</p>
-                    <p className="fahrenheit-btn">Fahrenheit</p>
+                    <div className="celsius-btn">Celsius</div>
+                    <div className="fahrenheit-btn">Fahrenheit</div>
                 </button>
             </div>
         </div>
